@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
+import Layout from './components/Layout';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Ayurveda test</h1>
-    </div>
-  );
+	return (
+		<Fragment>
+				<Layout/>
+		</Fragment>
+	);
 }
 
 export default App;

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.main-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	font-family: 'Poppins', sans-serif;
+	border-radius: 0.25rem;
+}
+
+.error {
+	background-color: rgb(255, 220, 220);
+	border: solid 0.5px rgb(255, 132, 132);
+	border-radius: 0.25rem;
+	padding: 0.3rem;
+	font-size: small;
+	width: 50vh;
+	text-align: center;
+
+}
+
+.question {
+	height: 20vh;
+	text-overflow: ellipsis;
+	text-align: center;
+	overflow-wrap: break-word;
+}
+
+.answers-container {
+	display: flex;
+	flex-direction: column;
+	width: 60vh;
+}
+
+.answer {
+	height: 3.5rem;
+	background-color: rgb(205, 205, 205);
+	border-radius: 0.25rem;
+	margin: 1.5rem;
+}
+
+.selected {
+	background-color: rgb(135, 133, 133);
+	border-color: seagreen;
+}
+
+.results-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(203, 195, 194);
+	height: 100vh;
+
+}
