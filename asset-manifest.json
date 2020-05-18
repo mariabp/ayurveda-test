@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ayurveda-test/static/css/main.f380c83e.chunk.css",
+    "main.js": "/ayurveda-test/static/js/main.1d3aceaa.chunk.js",
+    "main.js.map": "/ayurveda-test/static/js/main.1d3aceaa.chunk.js.map",
+    "runtime-main.js": "/ayurveda-test/static/js/runtime-main.3d898ce4.js",
+    "runtime-main.js.map": "/ayurveda-test/static/js/runtime-main.3d898ce4.js.map",
+    "static/js/2.5e05137c.chunk.js": "/ayurveda-test/static/js/2.5e05137c.chunk.js",
+    "static/js/2.5e05137c.chunk.js.map": "/ayurveda-test/static/js/2.5e05137c.chunk.js.map",
+    "index.html": "/ayurveda-test/index.html",
+    "precache-manifest.8b437d015a05384372136cdc58198cc7.js": "/ayurveda-test/precache-manifest.8b437d015a05384372136cdc58198cc7.js",
+    "service-worker.js": "/ayurveda-test/service-worker.js",
+    "static/css/main.f380c83e.chunk.css.map": "/ayurveda-test/static/css/main.f380c83e.chunk.css.map",
+    "static/js/2.5e05137c.chunk.js.LICENSE.txt": "/ayurveda-test/static/js/2.5e05137c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3d898ce4.js",
+    "static/js/2.5e05137c.chunk.js",
+    "static/css/main.f380c83e.chunk.css",
+    "static/js/main.1d3aceaa.chunk.js"
+  ]
+}
