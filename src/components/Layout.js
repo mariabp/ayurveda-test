@@ -3,7 +3,7 @@ import Progress from './Progress';
 import Question from './Question';
 import Answers from './Answers';
 import Results from './Results';
-import questions from '../assets/questions';
+import questions from '../utils/questions';
 
 const Layout = () => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -108,7 +108,7 @@ const Layout = () => {
 				{renderError()}
 				<Question question={question.question} />
 				<Answers question={question} currentAnswer={currentAnswer} handleClick={handleClick} />
-				<button onClick={nextQuestion}>Siguiente</button>
+				<button className="next-question" onClick={nextQuestion}>Siguiente</button>
 			</div>
 		)
 	}
