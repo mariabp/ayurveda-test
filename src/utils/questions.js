@@ -19,7 +19,7 @@ const questions = [
 		answer_a: 'Frecuentemente experimento gas o hinchazón',
 		answer_b: 'Frecuentemente experimento quemazón o acidez',
 		answer_c: 'Frecuentemente me siento pesado o con sueño'
-	},/* 
+	},
 	{
 		id: 4,
 		question: 'Hablando de mi eliminación...',
@@ -208,7 +208,7 @@ const questions = [
 		answer_a: 'Gris, café oscuro',
 		answer_b: 'Rosado oscuro, rojo',
 		answer_c: 'Pálida'
-	}, */
+	}
 ];
 
 export default questions;
