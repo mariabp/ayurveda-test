@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { Button } from 'grommet';
 
-const Answer = ({selected, letter, handleClick, answer}) => {
-	let classes = ['answer'];
 
-	if (selected) {
-		classes.push('selected');
-	}
+const Answer = ({ letter, handleClick, answer}) => {
 
 	return (
-	<button
+	<Button
+		fill
+		secondary
+		size="large"
+		alignSelf="center"
+		label={answer}
 		value={letter}
-		className={classes.join(' ')}
 		onClick={handleClick}>
-		{answer}
-	</button>
+	</Button>
 	);
 }
 

@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-body {
-	font-family: 'Poppins', sans-serif;
-}
-.main-container {
+/* .main-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -59,4 +56,4 @@ button {
 	background-color: rgb(203, 195, 194);
 	height: 100vh;
 
-}
+} */

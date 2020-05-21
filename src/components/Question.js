@@ -1,10 +1,12 @@
 import React from 'react';
+import { Text } from 'grommet';
+
 
 const Question = ({ question }) => {
 
 	return (
 		<div>
-			<h1 className='question'>{question}</h1>
+			<Text size="xxlarge" className='question'>{question}</Text>
 		</div>
 	)
 };

@@ -1,20 +1,32 @@
-import React from 'react'
+import React, { Fragment } from 'react';
+import { Box, Button, Meter, Stack, Text } from 'grommet';
 
 const Results = ({ results, restart }) => {
-	return  (
-		<div className="results-container">
-			<h1 className="result-title">Resultados</h1>
-			{results.map((r, index) => {
-				return (
-					<div className="result">
-						<h2 className="dosha" key={index}>{r.dosha}</h2>
-						<h2 className="percentage" key={index}>{r.percentage} %</h2>
-					</div>
-				)
-			})}
-		<button className="restart" onClick={restart}>Empezar de nuevo</button>
 
-		</div>
+	let mappedResults = results.map((result, index) => {
+
+		return (
+			<Fragment key={index} >
+				<Stack anchor="center">
+					<Meter size="small" type="circle" values={[{value: result.percentage, color: result.color}]}/>
+					<Box direction="row" align="center" pad={{ bottom: "xsmall" }}>
+						<Text>{result.dosha}</Text>
+						<Text size="xlarge" weight="bold">{result.percentage}</Text>
+						<Text size="small">%</Text>
+					</Box>
+				</Stack>
+			</Fragment>
+		)
+	});
+
+
+	return  (
+		<Box align="center" responsive gap="medium" width="100%">
+			<h1 className="result-title">Resultados</h1>
+			{mappedResults}
+		<Button primary color="neutral-2" label="Empezar de nuevo" onClick={restart}></Button>
+
+		</Box>
 	)
 }
 

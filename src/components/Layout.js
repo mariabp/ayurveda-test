@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Box, Stack, Paragraph, Button } from 'grommet';
+import { Alert } from 'grommet-icons';
 import Progress from './Progress';
 import Question from './Question';
 import Answers from './Answers';
@@ -25,7 +27,12 @@ const Layout = () => {
 			return
 		}
 
-		return <div className="error">{error}</div>
+		return (
+			<Box margin="medium" direction="row"height={{ max: "small" }} align="center" justify="center" animation="pulse" gap="small">
+				<Alert size="medium" color="status-warning" />
+				<Paragraph color="status-warning" size="small">{error}</Paragraph>
+			</Box>
+		)
 	};
 
 	const calculateResults = () => {
@@ -46,19 +53,22 @@ const Layout = () => {
 			return answer;
 		});
 
-		let vataPercentage = ((vataCount * 100) / questions.length).toFixed(2);
-		let pittaPercentage = ((pittaCount * 100) / questions.length).toFixed(2);
-		let kaphaPercentage =	((kaphaCount * 100) / questions.length).toFixed(2);
+		let vataPercentage = parseFloat((vataCount * 100) / questions.length).toFixed(2);
+		let pittaPercentage = parseFloat((pittaCount * 100) / questions.length).toFixed(2);
+		let kaphaPercentage =	parseFloat((kaphaCount * 100) / questions.length).toFixed(2);
 
 		let totalResults = [
 			{	dosha: 'vata',
-				percentage: vataPercentage,
+				percentage: +vataPercentage,
+				color: 'accent-3'
 			},
 			{	dosha: 'pitta',
-				percentage: pittaPercentage
+				percentage: +pittaPercentage,
+				color: 'status-critical'
 			},
 			{	dosha: 'kapha',
-				percentage: kaphaPercentage
+				percentage: +kaphaPercentage,
+				color: 'accent-2'
 			},
 		];
 
@@ -103,13 +113,13 @@ const Layout = () => {
 	} else {
 
 		return (
-			<div className="main-container">
+			<Box align="center" responsive gap="small" width="100%">
 				<Progress total={questions.length} current={question.id} />
-				{renderError()}
+				<Stack>{renderError()}</Stack>
 				<Question question={question.question} />
 				<Answers question={question} currentAnswer={currentAnswer} handleClick={handleClick} />
-				<button className="next-question" onClick={nextQuestion}>Siguiente</button>
-			</div>
+				<Button primary label="Siguiente" onClick={nextQuestion}></Button>
+			</Box>
 		)
 	}
 
