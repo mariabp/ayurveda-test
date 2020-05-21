@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ayurveda-test/precache-manifest.8b437d015a05384372136cdc58198cc7.js"
+  "/ayurveda-test/precache-manifest.8bf1ec16d1a423ec134eff09919c4d7a.js"
 );
 
 self.addEventListener('message', (event) => {
