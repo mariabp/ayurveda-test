@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grommet } from 'grommet';
+import { Grommet, ResponsiveContext } from 'grommet';
 import './App.css';
 import Layout from './components/Layout';
 
@@ -14,7 +14,11 @@ const myTheme = {
 function App() {
 	return (
 		<Grommet theme={myTheme}>
-				<Layout/>
+			<ResponsiveContext.Consumer>
+				{size => (
+					<Layout/>
+				)}
+			</ResponsiveContext.Consumer>
 		</Grommet>
 	);
 }

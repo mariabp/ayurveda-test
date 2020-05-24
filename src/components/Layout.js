@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Paragraph, Button } from 'grommet';
+import { Next } from "grommet-icons";
 import { Alert } from 'grommet-icons';
 import Progress from './Progress';
 import Question from './Question';
@@ -118,7 +119,7 @@ const Layout = () => {
 				<Box height="10vh">{renderError()}</Box>
 				<Question question={question.question} />
 				<Answers question={question} currentAnswer={currentAnswer} handleClick={handleClick} />
-				<Button primary label="Siguiente" onClick={nextQuestion}></Button>
+				<Button primary label="Siguiente" onClick={nextQuestion} icon={<Next />} reverse></Button>
 			</Box>
 		)
 	}
