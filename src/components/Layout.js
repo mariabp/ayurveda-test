@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Stack, Paragraph, Button } from 'grommet';
+import { Box, Paragraph, Button } from 'grommet';
 import { Alert } from 'grommet-icons';
 import Progress from './Progress';
 import Question from './Question';
@@ -28,7 +28,7 @@ const Layout = () => {
 		}
 
 		return (
-			<Box margin="medium" direction="row"height={{ max: "small" }} align="center" justify="center" animation="pulse" gap="small">
+			<Box margin="medium" direction="row"height={{ max: "small" }} align="center" justify="center" gap="small">
 				<Alert size="medium" color="status-warning" />
 				<Paragraph color="status-warning" size="small">{error}</Paragraph>
 			</Box>
@@ -115,7 +115,7 @@ const Layout = () => {
 		return (
 			<Box align="center" responsive gap="small" width="100%">
 				<Progress total={questions.length} current={question.id} />
-				<Stack>{renderError()}</Stack>
+				<Box height="10vh">{renderError()}</Box>
 				<Question question={question.question} />
 				<Answers question={question} currentAnswer={currentAnswer} handleClick={handleClick} />
 				<Button primary label="Siguiente" onClick={nextQuestion}></Button>
